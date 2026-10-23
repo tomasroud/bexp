@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI hry pro děti</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Výukové hry pro děti, které vznikají s pomocí umělé inteligence. Čeština, angličtina a další, bez reklam a bez registrace.">
+<meta name="description" content="Výukové hry pro děti, které vznikají s pomocí umělé inteligence. Čeština, angličtina a další. Bez reklam a bez registrace. Autor: Tomáš Roud.">
+<meta name="author" content="Tomáš Roud">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@600;700;800&display=swap">
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -24,24 +25,92 @@
 </header>
 
 <main>
-  <section class="intro wrap">
-    <h1>Hry, u kterých se děti něco naučí</h1>
-    <p>Každou hru tady vymyslela a naprogramovala umělá inteligence podle zadání rodiče. Hry běží přímo v prohlížeči na mobilu, tabletu i počítači, nemají reklamy a nic nechtějí: ani registraci, ani data.</p>
-    <p><a class="why" href="proc-hrat/">Proč si myslíme, že zakazovat dětem mobil je špatná cesta →</a></p>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Mobil, u kterého se dítě <em>něco naučí</em></h1>
+        <p class="lead">Hry na češtinu, angličtinu a další, které vymyslela a naprogramovala umělá inteligence. Čtou nahlas, vysvětlí každou chybu a po pár minutách skončí. Běží v prohlížeči na mobilu, tabletu i počítači.</p>
+        <div class="actions">
+          <a class="btn primary" href="#hry">Vybrat hru ▶</a>
+          <a class="btn ghost" href="proc-hrat/">Proč ne zákaz mobilů</a>
+        </div>
+      </div>
+      <div class="playground" aria-hidden="true">
+        <span class="critter" style="--s:96px; --x:12%; --y:14%; --d:0s">🐶</span>
+        <span class="critter" style="--s:120px; --x:54%; --y:8%; --d:-1.5s">🦒</span>
+        <span class="critter" style="--s:84px; --x:66%; --y:52%; --d:-3s">🦔</span>
+        <span class="critter" style="--s:104px; --x:16%; --y:56%; --d:-4.5s">🐸</span>
+        <span class="word" style="--x:34%; --y:42%; --r:-5deg">žába</span>
+        <span class="word adj" style="--x:46%; --y:80%; --r:4deg">zelená</span>
+        <span class="word" style="--x:6%; --y:84%; --r:-3deg">dog</span>
+      </div>
+    </div>
   </section>
 
-  <section class="filters wrap" aria-label="Filtry">
-    <div class="filter-row" id="catRow"><span>Kategorie</span></div>
-    <div class="filter-row" id="tagRow"><span>Štítky</span></div>
-    <div class="result-count" id="count" aria-live="polite"></div>
+  <section class="perks">
+    <div class="wrap">
+      <ul>
+        <li><i aria-hidden="true">🔊</i>Čte nahlas, zvládnou i nečtenáři</li>
+        <li><i aria-hidden="true">💡</i>Vysvětlí každou odpověď</li>
+        <li><i aria-hidden="true">🚫</i>Bez reklam, nákupů a registrace</li>
+        <li><i aria-hidden="true">⏱️</i>Kolo trvá pár minut</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="grid wrap" id="grid" aria-label="Hry"></section>
-  <p class="empty wrap" id="empty" hidden>Takovou hru tu zatím nemáme. Zkus jiný filtr.</p>
+  <section class="section" id="hry">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Katalog</div>
+          <h2>Vyber hru</h2>
+        </div>
+        <div class="result-count" id="count" aria-live="polite"></div>
+      </div>
+      <div class="filters" aria-label="Filtry">
+        <div class="filter-row" id="catRow"><span>Kategorie</span></div>
+        <div class="filter-row" id="tagRow"><span>Štítky</span></div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>Takovou hru tu zatím nemáme. Zkus jiný filtr.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <blockquote>Zakázat dětem mobil je snadné. <em>Naučit je ho používat je lepší.</em></blockquote>
+      <div>
+        <div class="stat"><b>30</b><span>anglických škol ve studii z roku 2025. Zákaz mobilů v nich dětem nezlepšil pohodu, spánek ani známky.</span></div>
+        <a class="btn primary" href="proc-hrat/">Přečíst, proč ▶</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="eyebrow">Jak hry vznikají</div>
+      <h2>Od nápadu ke hře za jedno odpoledne</h2>
+      <ol class="steps">
+        <li><b>Rodič popíše, co dítě probírá</b><span>Třeba „vyjmenovaná slova po B, ale s dinosaury“, nebo slovíčka z angličtiny na tento týden.</span></li>
+        <li><b>AI navrhne a naprogramuje hru</b><span>Podle ověřených zásad: zadání nahlas, vysvětlující zpětná vazba, obtížnost roste postupně.</span></li>
+        <li><b>Vyzkoušíme ji a dáme ji sem</b><span>Každá hra je jeden soubor, který běží v prohlížeči. Nic se neinstaluje.</span></li>
+      </ol>
+    </div>
+  </section>
 </main>
 
 <footer class="foot">
-  <div class="wrap">AI hry · aihry.roud.cz · Hry ukládají jen postup (třeba nálepky) v prohlížeči dítěte a nikam ho neposílají.</div>
+  <div class="wrap">
+    <div>
+      <p class="author">Autor: <b><a href="https://roud.cz/">Tomáš Roud</a></b> · <a href="https://roud.cz/">roud.cz</a></p>
+      <p class="note">Hry nemají reklamy ani registraci. Pamatují si jen postup (třeba nálepky), a to v prohlížeči dítěte.</p>
+    </div>
+    <nav aria-label="Patička">
+      <a href="./">Hry</a>
+      <a href="proc-hrat/">Proč hrát</a>
+      <a href="https://roud.cz/">roud.cz</a>
+    </nav>
+  </div>
 </footer>
 
 <script src="assets/games.js"></script>
@@ -50,6 +119,7 @@ const games = window.AIHRY_GAMES || [];
 const state = { cat: null, tag: null };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const uniq = list => [...new Set(list)].sort((a, b) => a.localeCompare(b, "cs"));
+const plural = n => `${n} ${n === 1 ? "hra" : n >= 2 && n <= 4 ? "hry" : "her"}`;
 
 function chips(row, values, key) {
   const el = document.getElementById(row);
@@ -69,33 +139,33 @@ function render() {
   chips("catRow", uniq(games.flatMap(g => g.categories)), "cat");
   chips("tagRow", uniq(games.flatMap(g => g.tags)), "tag");
 
+  const filtered = state.cat || state.tag;
   const shown = games.filter(g =>
     (!state.cat || g.categories.includes(state.cat)) && (!state.tag || g.tags.includes(state.tag)));
 
-  document.getElementById("grid").innerHTML = shown.map(g => {
+  const cards = shown.map(g => {
     const href = `hry/${encodeURIComponent(g.slug)}/`;
     return `<article class="game">
-      <a class="cover" href="${href}" style="--tint:${esc(g.tint || "")}" aria-hidden="true" tabindex="-1">${esc(g.cover)}</a>
+      <a class="cover" href="${href}" style="--tint:${esc(g.tint || "")}" tabindex="-1" aria-hidden="true">${esc(g.cover)}<span class="badge">${esc(g.age)}</span></a>
       <div class="body">
-        <h2><a href="${href}">${esc(g.title)}</a></h2>
-        <div class="meta">
-          <span class="age">${esc(g.age)}</span>
-          ${g.categories.map(c => `<span class="cat">${esc(c)}</span>`).join("")}
-        </div>
+        <h3><a href="${href}">${esc(g.title)}</a></h3>
+        <div class="meta">${g.categories.map(c => `<span class="cat">${esc(c)}</span>`).join("")}</div>
         <p>${esc(g.description)}</p>
         <div class="meta">${g.tags.map(t => `<button type="button" class="tag" data-tag="${esc(t)}">#${esc(t)}</button>`).join("")}</div>
-        <a class="play" href="${href}">Hrát ▶</a>
+        <a class="btn primary" href="${href}">Hrát ▶</a>
       </div>
     </article>`;
-  }).join("");
+  });
+  if (!filtered) {
+    cards.push(`<div class="soon"><i aria-hidden="true">🧩</i><b>Další hry přibudou</b>Máte nápad, co by se dítě mělo naučit? Napište na roud.cz.</div>`);
+  }
+  document.getElementById("grid").innerHTML = cards.join("");
 
   document.querySelectorAll(".game .tag").forEach(b =>
     b.addEventListener("click", () => { state.tag = b.dataset.tag; render(); }));
 
-  const n = shown.length;
-  document.getElementById("count").textContent =
-    `${n} ${n === 1 ? "hra" : n >= 2 && n <= 4 ? "hry" : "her"}`;
-  document.getElementById("empty").hidden = n > 0;
+  document.getElementById("count").textContent = plural(shown.length);
+  document.getElementById("empty").hidden = shown.length > 0;
 }
 
 render();

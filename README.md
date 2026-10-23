@@ -8,7 +8,6 @@ proc-hrat/index.html     článek: proč AI hry a proč ne plošný zákaz mobil
 assets/site.css          vzhled katalogu a článku
 assets/games.js          seznam her (název, popis, věk, kategorie, štítky)
 hry/<slug>/index.html    jednotlivé hry, každá je samostatný soubor
-CNAME                    doména pro GitHub Pages
 ```
 
 ## Jak přidat hru
@@ -22,4 +21,6 @@ CNAME                    doména pro GitHub Pages
 
 ## Nasazení
 
-Web běží na GitHub Pages s vlastní doménou `aihry.roud.cz` (DNS záznam CNAME → `tomasroud.github.io`).
+Web patří na server `app` (app.roud.cz, 185.216.203.188) jako statický web pro doménu `aihry.roud.cz`. DNS (A a AAAA záznam na `app`) je nastavené. Stačí obsah repozitáře nakopírovat do složky webu a v proxy na serveru přidat doménu `aihry.roud.cz`, která ji servíruje.
+
+Autor: [Tomáš Roud](https://roud.cz/)
